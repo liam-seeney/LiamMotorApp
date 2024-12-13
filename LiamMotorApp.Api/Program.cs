@@ -1,4 +1,8 @@
 using LiamMotorApp.Business;
+using LiamMotorApp.Business.Repositories;
+using LiamMotorApp.Business.Repositories.Interfaces;
+using LiamMotorApp.Business.Services;
+using LiamMotorApp.Business.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +16,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<DatabaseContext>(options =>
   options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IEnquiryRepository, EnquiryRepository>();
+builder.Services.AddScoped<IEnquiryService, EnquiryService>();
 
 var app = builder.Build();
 

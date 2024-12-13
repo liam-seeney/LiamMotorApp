@@ -1,18 +1,20 @@
-﻿using LiamMotorApp.Common.Models.EnquiryModels;
+﻿using LiamMotorApp.Business.Entities;
 
-namespace LiamMotorApp.Business.Entities;
+namespace LiamMotorApp.Business.Models.EnquiryModels;
 
-public class Enquiry : BaseEntity
+public class EnquiryListResponse
 {
+  public Guid Id { get; set; }
   public string FirstName { get; set; } = string.Empty;
   public string LastName { get; set; } = string.Empty;
   public string EmailAddress { get; set; } = string.Empty;
-  public string Message { get; set; } = string.Empty;
+  public string Message {  get; set; } = string.Empty;
 
-  public Enquiry() { }
+  public EnquiryListResponse() { }
 
-  public Enquiry(CreateEnquiry enquiry)
+  public EnquiryListResponse(Enquiry enquiry)
   {
+    Id = enquiry.Id;
     FirstName = enquiry.FirstName;
     LastName = enquiry.LastName;
     EmailAddress = enquiry.EmailAddress;

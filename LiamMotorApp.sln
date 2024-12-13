@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiamMotorApp.Business", "Li
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiamMotorApp.Api", "LiamMotorApp.Api\LiamMotorApp.Api.csproj", "{125CC708-12D1-4C92-9718-862287C6D18E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiamMotorApp.Common", "LiamMotorApp.Common\LiamMotorApp.Common.csproj", "{97D68313-3E88-438F-BAB6-D505A822AFC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{125CC708-12D1-4C92-9718-862287C6D18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{125CC708-12D1-4C92-9718-862287C6D18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{125CC708-12D1-4C92-9718-862287C6D18E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D68313-3E88-438F-BAB6-D505A822AFC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D68313-3E88-438F-BAB6-D505A822AFC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D68313-3E88-438F-BAB6-D505A822AFC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D68313-3E88-438F-BAB6-D505A822AFC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

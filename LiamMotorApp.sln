@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiamMotorApp.Api", "LiamMot
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiamMotorApp.Common", "LiamMotorApp.Common\LiamMotorApp.Common.csproj", "{97D68313-3E88-438F-BAB6-D505A822AFC7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiamMotorApp.Website", "LiamMotorApp.Website\LiamMotorApp.Website.csproj", "{98681510-D720-4AD3-A680-2D5958DEA71D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{97D68313-3E88-438F-BAB6-D505A822AFC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97D68313-3E88-438F-BAB6-D505A822AFC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97D68313-3E88-438F-BAB6-D505A822AFC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98681510-D720-4AD3-A680-2D5958DEA71D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98681510-D720-4AD3-A680-2D5958DEA71D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98681510-D720-4AD3-A680-2D5958DEA71D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98681510-D720-4AD3-A680-2D5958DEA71D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

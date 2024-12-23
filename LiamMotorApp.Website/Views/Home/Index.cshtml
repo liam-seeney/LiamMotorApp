@@ -1,0 +1,35 @@
+﻿@model NewEnquiryViewModel
+
+@{
+  ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+  <h1 class="display-4">Welcome</h1>
+  <p>Please submit an enquiry using the form below.</p>
+</div>
+
+<div class="card w-50 m-auto">
+  <form asp-controller="home" asp-action="createenquiry" method="post" class="card-body">
+    <div class="mb-3">
+      <label asp-for="Model.FirstName" class="form-label">First name:</label>
+      <input asp-for="Model.FirstName" class="form-control" type="text" />
+    </div>
+
+    <div class="mb-3">
+      <label asp-for="Model.LastName" class="form-label">Last name:</label>
+      <input asp-for="Model.LastName" class="form-control" type="text" />
+    </div>
+
+    <div class="mb-3">
+      <label asp-for="Model.EmailAddress" class="form-label">Email Address:</label>
+      <input asp-for="Model.EmailAddress" class="form-control" type="email" />
+    </div>
+
+    <div class="mb-3">
+      <label asp-for="Model.Message" class="form-label">Enquiry:</label>
+      <textarea asp-for="Model.Message" class="form-control" rows="5"></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+</div>

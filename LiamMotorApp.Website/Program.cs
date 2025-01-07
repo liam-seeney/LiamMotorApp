@@ -1,7 +1,11 @@
+using LiamMotorApp.Common.Services;
+using LiamMotorApp.Common.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpClient<IApiIntegrationService, ApiIntegrationService>();
 
 var app = builder.Build();
 

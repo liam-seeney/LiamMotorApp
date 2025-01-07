@@ -1,4 +1,7 @@
+using LiamMotorApp.Common.Models.EnquiryModels;
+using LiamMotorApp.Common.Services.Interfaces;
 using LiamMotorApp.Website.Models;
+
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -7,20 +10,24 @@ namespace LiamMotorApp.Website.Controllers
   public class HomeController : Controller
   {
     private readonly ILogger<HomeController> _logger;
+    private readonly IApiIntegrationService _apiIntegration;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, IApiIntegrationService apiIntegration)
     {
       _logger = logger;
+      _apiIntegration = apiIntegration;
     }
 
     public IActionResult Index()
     {
-      NewEnquiryViewModel model = new NewEnquiryViewModel();
+      NewEnquiryViewModel model = new();
       return View(model);
     }
 
-    public IActionResult CreateEnquiry()
+    [HttpPost]
+    public async Task<IActionResult> CreateEnquiry(NewEnquiryViewModel enquiry)
     {
+      await _apiIntegration.PostAsync(Globals.POSTENQUIRY, enquiry.Model);
       return RedirectToAction(nameof(Index));
     }
 
